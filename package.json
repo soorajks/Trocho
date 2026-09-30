@@ -1,0 +1,43 @@
+{
+  "name": "spirotext-studio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Turn text into intricate spirograph art — trace letters with rolling-loop patterns, ride text along a parametric curve, and export to PNG, SVG, or PDF.",
+  "homepage": "https://soorajks.github.io/Trocho/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soorajks/Trocho.git"
+  },
+  "author": "Sooraj <soorajsooriadas@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "file-saver": "^2.0.5",
+    "jspdf": "^4.2.1",
+    "lucide-react": "^1.41.0",
+    "next": "16.3.4",
+    "opentype.js": "^2.0.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "svg2pdf.js": "^2.8.1",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/file-saver": "^2.0.7",
+    "@types/node": "^20",
+    "@types/opentype.js": "^1.3.10",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.4",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "packageManager": "pnpm@11.17.0"
+}

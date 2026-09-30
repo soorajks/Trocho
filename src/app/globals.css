@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Surface hierarchy: app chrome < sidebar < canvas, kept close together on purpose. */
+  --color-app: #09090b;
+  --color-sidebar: #0f0f12;
+  --color-canvas: #101015;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Native <select> dropdown popup: some platforms (Windows Chrome/Edge) don't fully inherit
+   color-scheme for the popup list, so it renders with OS-default white background + our light
+   text color, making unselected options unreadable. Force explicit dark styling on <option>. */
+select {
+  color-scheme: dark;
+}
+select option {
+  background-color: #16161b;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* Custom range slider: filled track (set via inline --fill-color style) + a glowing thumb. */
+.spiro-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 9999px;
+  outline: none;
+  cursor: pointer;
+}
+.spiro-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 9999px;
+  background: #fff;
+  border: 2px solid #818cf8;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5), 0 0 0 3px rgba(129, 140, 248, 0.15);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  margin-top: -0.5px;
+}
+.spiro-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5), 0 0 0 5px rgba(129, 140, 248, 0.2);
+}
+.spiro-slider:active::-webkit-slider-thumb {
+  transform: scale(1.05);
+}
+.spiro-slider::-moz-range-thumb {
+  width: 13px;
+  height: 13px;
+  border-radius: 9999px;
+  border: 2px solid #818cf8;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.spiro-slider::-moz-range-track {
+  height: 4px;
+  border-radius: 9999px;
+  background: transparent;
+}
+
+/* Rounded, borderless native color swatch. */
+.spiro-color-swatch {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  padding: 0;
+  background: none;
+}
+.spiro-color-swatch::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+.spiro-color-swatch::-webkit-color-swatch {
+  border: none;
+  border-radius: 9999px;
+}
+.spiro-color-swatch::-moz-color-swatch {
+  border: none;
+  border-radius: 9999px;
+}
+
+/* Thin, unobtrusive scrollbar for the control sidebar. */
+.spiro-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+.spiro-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.spiro-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+}
+.spiro-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.16);
+}

@@ -1,0 +1,17 @@
+{
+  "name": "SpiroText Studio",
+  "short_name": "SpiroText",
+  "description": "Turn your text into intricate spirograph art, printable and exportable.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0f14",
+  "theme_color": "#0f0f14",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
