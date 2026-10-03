@@ -42,8 +42,6 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser. The page auto-updates as you edit files under `src/`.
 
-Live at **https://soorajks.github.io/Trocho/**.
-
 ## Documentation
 
 See [docs/index.md](docs/index.md) for more:
